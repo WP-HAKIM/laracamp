@@ -14,17 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('/front-end/pages/index');
-});
-Route::get('/login', function () {
-    return view('/front-end/pages/login');
-});
+    return view('front-end.pages.index');
+})->name('index');
 Route::get('/checkout', function () {
-    return view('/front-end/pages/checkout');
-});
+    return view('front-end.pages.checkout');
+})->name('checkout');
 Route::get('/success-checkout', function () {
-    return view('/front-end/pages/succescheckout');
-});
+    return view('front-end.pages.checkout');
+})->name('success-checkout');
+
 Route::get('/dashboard', function () {
-    return view('/front-end/pages/dashboard');
-});
+    return view('front-end.pages.dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
