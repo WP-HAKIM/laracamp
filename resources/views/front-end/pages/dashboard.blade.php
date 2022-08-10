@@ -1,4 +1,4 @@
-@extends('front-end.layouts.loginapp')
+@extends('front-end.layouts.app')
 
 @section('title')
     Dashboard | Laracamp
